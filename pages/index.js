@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
 
 const Exeggutor = () => {
   const [pokemonData, setPokemonData] = useState(null);
@@ -36,7 +37,11 @@ const Exeggutor = () => {
             ))}
           </ul>
           <p>Sprites:</p>
-          <img src={pokemonData.sprites.front_default} alt="Exeggutor" />
+          <Link href="/info">
+            <a>
+              <img className="sprite" src={pokemonData.sprites.front_default} alt="Exeggutor" />
+            </a>
+          </Link>
         </div>
       ) : (
         <p>Loading...</p>
