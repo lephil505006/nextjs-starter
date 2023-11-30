@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import './styles/tailwind.css';
 
 const Exeggutor = () => {
   const [pokemonData, setPokemonData] = useState(null);
@@ -23,19 +24,21 @@ const Exeggutor = () => {
   }, []);
 
   return (
-    <div>
-      <h1>Exeggutor Pokemon Details</h1>
+    <div className='pokemonCard'>
+      <h1>Pokemon Info</h1>
+      <h1>Exeggutor</h1>
       {pokemonData ? (
         <div>
-          <p>Name: {pokemonData.name}</p>
-          <p>Height: {pokemonData.height}</p>
-          <p>Weight: {pokemonData.weight}</p>
+          <p className="font-bold">Height: {pokemonData.height} Meters</p>
+          <p className="font-bold">Weight: {pokemonData.weight} Kilograms</p>
+          <br></br>
           <p>Abilities:</p>
           <ul>
             {pokemonData.abilities.map((ability, index) => (
               <li key={index}>{ability.ability.name}</li>
             ))}
           </ul>
+          <br></br>
           <p>Sprites:</p>
           <Link href="/info">
             <a>
@@ -46,6 +49,7 @@ const Exeggutor = () => {
               />
             </a>
           </Link>
+          <p>Click Image to see more!</p>
         </div>
       ) : (
         <p>Loading...</p>
