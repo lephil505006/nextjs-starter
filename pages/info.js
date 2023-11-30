@@ -13,6 +13,7 @@ const InfoPage = () => {
       <img
         className="alolan"
         src={'https://archives.bulbagarden.net/media/upload/9/94/0103Exeggutor-Alola.png'}
+        alt="alolanegg"
       />
     </div>
   );
