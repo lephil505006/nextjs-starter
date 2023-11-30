@@ -14,11 +14,7 @@ const InfoPage = () => {
       </Link>
       <br />
       <p>This is the information page.</p>
-      <img
-        className="alolan"
-        src={imageUrl}
-        alt="alolanegg"
-      />
+      <img className="alolan" src={imageUrl} alt="alolanegg" />
     </div>
   );
 };
