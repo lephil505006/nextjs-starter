@@ -6,7 +6,8 @@ const Exeggutor = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('https://pokeapi.co/api/v2/pokemon/exeggutor');
+        const apiUrl = 'https://pokeapi.co/api/v2/pokemon/exeggutor';
+        const response = await fetch(apiUrl);
         if (!response.ok) {
           throw new Error('Network response was not ok.');
         }
