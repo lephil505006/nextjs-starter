@@ -24,7 +24,7 @@ const Exeggutor = () => {
 
   return (
     <div className="pokemonCard">
-      <h1 className="bg-green-500 p-8 px-20 rounded-md" >Pokemon Info</h1>
+      <h1 className="bg-green-500 p-8 px-20 rounded-md">Pokemon Info</h1>
       <h1>Exeggutor</h1>
       {pokemonData ? (
         <div className="bg-green-500 p-10 rounded-md">
