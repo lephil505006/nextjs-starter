@@ -1,25 +1,47 @@
-import SmallCard from '../components/SmallCard';
-import { projectIcons } from '../components/Icons';
+import React, { useState, useEffect } from 'react';
 
-import { projects } from '../utils/projectsData';
+const Exeggutor = () => {
+  const [pokemonData, setPokemonData] = useState(null);
 
-const Home = () => (
-  <div className="home">
-    <h1>What Can I Deploy to Static Apps?</h1>
-    <div className="card-grid">
-      {projects.map((project) => {
-        const Icon = projectIcons[project.id];
-        return (
-          <SmallCard
-            key={project.id}
-            Icon={Icon}
-            title={project.name}
-            slug={project.slug}
-          />
-        );
-      })}
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch('https://pokeapi.co/api/v2/pokemon/exeggutor');
+        if (!response.ok) {
+          throw new Error('Network response was not ok.');
+        }
+        const data = await response.json();
+        setPokemonData(data);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  return (
+    <div>
+      <h1>Exeggutor Pokemon Details</h1>
+      {pokemonData ? (
+        <div>
+          <p>Name: {pokemonData.name}</p>
+          <p>Height: {pokemonData.height}</p>
+          <p>Weight: {pokemonData.weight}</p>
+          <p>Abilities:</p>
+          <ul>
+            {pokemonData.abilities.map((ability, index) => (
+              <li key={index}>{ability.ability.name}</li>
+            ))}
+          </ul>
+          <p>Sprites:</p>
+          <img src={pokemonData.sprites.front_default} alt="Exeggutor" />
+        </div>
+      ) : (
+        <p>Loading...</p>
+      )}
     </div>
-  </div>
-);
+  );
+};
 
-export default Home;
+export default Exeggutor;
