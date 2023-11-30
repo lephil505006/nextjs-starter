@@ -39,7 +39,11 @@ const Exeggutor = () => {
           <p>Sprites:</p>
           <Link href="/info">
             <a>
-              <img className="sprite" src={pokemonData.sprites.front_default} alt="Exeggutor" />
+              <img
+                className="sprite"
+                src={pokemonData.sprites.front_default}
+                alt="Exeggutor"
+              />
             </a>
           </Link>
         </div>

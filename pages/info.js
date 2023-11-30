@@ -10,7 +10,10 @@ const InfoPage = () => {
       </Link>
       <br></br>
       <p>This is the information page.</p>
-      <img className="alolan" src={'https://archives.bulbagarden.net/media/upload/9/94/0103Exeggutor-Alola.png'} />
+      <img
+        className="alolan"
+        src={'https://archives.bulbagarden.net/media/upload/9/94/0103Exeggutor-Alola.png'}
+      />
     </div>
   );
 };
