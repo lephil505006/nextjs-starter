@@ -10,11 +10,16 @@ const InfoPage = () => {
     <div className="info-container">
       <div className="info-text">
         <h1>More about Exeggutor</h1>
-        <p>This pokemon is considered a "Grass" and "Psychic"</p>
+        <p>
+          This pokemon is considered a &quot;Grass&quot; and &quot;Psychic&quot;
+        </p>
         <p>
           However, this pokemon has a 2nd version which is the alolan verison
         </p>
-        <p>Which makes the Exeggutor a "Grass" "Dragon" pokemon instead.</p>
+        <p>
+          Which makes the Exeggutor a &quot;Grass&quot; &quot;Dragon&quot;
+          pokemon instead.
+        </p>
         <br />
         <Link href="./">
           <p className="back font-bold rounded-md">Main Page</p>
