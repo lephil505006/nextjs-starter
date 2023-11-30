@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import './styles/tailwind.css';
 
 const Exeggutor = () => {
   const [pokemonData, setPokemonData] = useState(null);
@@ -24,7 +23,7 @@ const Exeggutor = () => {
   }, []);
 
   return (
-    <div className='pokemonCard'>
+    <div className="pokemonCard">
       <h1>Pokemon Info</h1>
       <h1>Exeggutor</h1>
       {pokemonData ? (
