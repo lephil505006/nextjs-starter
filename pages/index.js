@@ -23,22 +23,22 @@ const Exeggutor = () => {
   }, []);
 
   return (
-    <div className="pokemonCard">
-      <h1>Pokemon Info</h1>
+    <div class="pokemonCard">
+      <h1 class="bg-green-500 p-8 px-20 rounded-md" >Pokemon Info</h1>
       <h1>Exeggutor</h1>
       {pokemonData ? (
-        <div>
-          <p className="font-bold">Height: {pokemonData.height} Meters</p>
-          <p className="font-bold">Weight: {pokemonData.weight} Kilograms</p>
+        <div class="bg-green-500 p-10 rounded-md">
+          <p class="font-bold">Height: {pokemonData.height} Meters</p>
+          <p class="font-bold">Weight: {pokemonData.weight} Kilograms</p>
           <br></br>
-          <p>Abilities:</p>
+          <p class="font-bold">Abilities:</p>
           <ul>
             {pokemonData.abilities.map((ability, index) => (
               <li key={index}>{ability.ability.name}</li>
             ))}
           </ul>
           <br></br>
-          <p>Sprites:</p>
+          <p class="font-bold">Sprites:</p>
           <Link href="/info">
             <a>
               <img
@@ -48,7 +48,7 @@ const Exeggutor = () => {
               />
             </a>
           </Link>
-          <p>Click Image to see more!</p>
+          <p class="font-bold">Click Image to see more!</p>
         </div>
       ) : (
         <p>Loading...</p>
